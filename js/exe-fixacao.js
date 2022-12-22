@@ -1,10 +1,13 @@
 
 function somar () {
 
-    var vlr1 = document.getElementById('num1').value
-    var vlr2 = document.getElementById('num2').value;
+    var vlr1 = parseInt(document.getElementById('num1').value)
 
-    var soma = Number(vlr1) + Number (vlr2) ; 
+    var vlr2 = parseInt(document.getElementById('num2').value)
+
+    var soma = vlr1 + vlr2 ; 
 
     res.innerHTML = soma;
+
+
 }
