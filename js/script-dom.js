@@ -1,10 +1,16 @@
 // DOM - Domain Object Model
 
+// getElementsByTagName(tipo-da-tag);
+// getElementById('nome-do-id');
+// getElementsByClassName('nome-da-class');
+// **document.querySelector('tipo-da-tag . ou # nome')
+
+
 
 // ACESSO AO ELEMENTO  POR MARCA (tag name)
 // getElementsByTagName()[];
 
-var element = document.getElementsByTagName('h2')[1];
+var element = document.getElementsByTagName('h2')[2];
 element.style.color='red';
 element.innerHTML='**Acessando elemento**';
 element.style.fontFamily='TimesNewRoma'
@@ -33,7 +39,8 @@ element3.innerHTML='-q-w-e-r-t-y-'
 
 var element4=document.getElementsByClassName('acesso')[0];
 element4.innerText='-------------------------------'
-element4.style.background='red'
+element4.style.color='white';
+element4.style.background='red';
 
 // ----------------------------------------------------
 
@@ -42,6 +49,25 @@ element4.style.background='red'
 
 
 let element5 = document.querySelector('div.query')
-
 element5.innerHTML='77777'
 
+let element6 = document.querySelector('div.queries')
+element6.innerHTML='88888'
+
+/**
+ * <h2 class="ml-5">Iniciando estodos DOM</h2>
+
+    <h2 class="ml-5">Acessando elementos com DOM</h2>
+
+    <h2>Acessando elemento </h2>
+<!-- ----------------------------------------- -->
+    <p id="resul" style="font-size: 0.9em;">Resultado aqui...</p>
+
+    <p id="clique">Clique em mim</p>
+<!-- ------------------------------------------ -->
+    <div class="acesso">Acesso por class</div>
+
+    <div class="queries">Acesso por class</div>
+
+    <div class="query">Acesso por class</div>
+ */

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+
+#area {
+    margin: auto;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    font-size: 2em;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
