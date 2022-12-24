@@ -1,26 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>JS-DOM</title>
-  </head>
-  <body>
-    <h1 class="display-2 text-warning text-center" style="font-weight: bold;">JS-DOM</h1>
+</head>
 
-    <form action="" class="form-group">
+<body>
+
+    
+
+    <!-- calcular consumo combustivel -->
+
+    <form class="form-group">
+
+        <h4>Consumo por km/l</h4>
+
+        <form action="#">
+
+          <label class="form-control" for="icombustivel">Valor Combustivel</label>
+
+        <input class="form-control" type="number" name="combustivel" id="icombustivel" placeholder="Digite valor">
+
+
+        <label class="form-control" for="ipago">Valor Pago</label> 
+
+        <input class="form-control" type="number" name="pago" id="ipago" placeholder="Digite valor">
+
+        <label class="form-control" for="iconsumo">Consumo por litro</label> 
+
+          <!-- CONSUMO -->
+
+        <input class="form-control" type="number" name="consumo" id="iconsumo" placeholder="Digite valor">
+
+
+
+
+        <h3 class="text-center mt-4">Total de litros</h3>
+        <p class="text-center"  id="total">-------------</p>
+
+        <h3 class="text-center mt-4">Pode andar</h3>
+        <p class="text-center"  id="andar">-------------</p>
+
+
+
+
+        <input class="btn btn-outline-info ml-4" type="button" value="Calcular" onclick="calcularConsumo()">
+
+        <input class="btn btn-outline-danger ml-1" type="reset" value="Reset">
+
+        </form>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- JavaScript (Opcional) -->
+        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+        <script src="js/exe.calc-raio.js"></script>
+</body>
+
+</html>
+
+
+<!-- Calculo de Adição -->
+<!-- <form action="" class="form-group">
 
       <input class="form-control" type="number" name="num1" id="num1" placeholder="digite valor aqui"> 
 +
-    <input class="form-control type="number" name="num2" id="num2" placeholder="digite valor aqui">
+    <input class="form-control" type="number" name="num2" id="num2" placeholder="digite valor aqui">
 
     <button class="btn btn-primary mt-4" onclick="somar()"  type="button">Calcular</button>
 
@@ -28,24 +99,48 @@
 
     <p id="res" style="text-align: center; font-size: larger;">-------</p>
 
+    </form> -->
+
+<!-- ---------------------------------------- -->
+
+<!-- Calcular IMC -->
+<!-- <form action="" class="form-group">
+        <fieldset>
+
+            <label for="inome">Nome do Paciente</label>
+            <input class="form-control" type="text" name="nome" id="inome" placeholder="Digite aqui">
+
+            <label for="ipeso">Peso do Paciente</label>
+            <input class="form-control" type="number" name="peso" id="ipeso" placeholder="Digite aqui">
+
+            <label for="ialtura">Altura do Paciente</label>
+            <input class="form-control" type="number" name="altura" id="ialtura" placeholder="Digite aqui">
 
 
+            <h3 id="res" class="text-center">-- imc -- </h3>
+            <p id="txt" class="text-center">-----</p>
+
+            <input class="btn btn-success mt-3" type="button" value="Verificar" onclick="imc()">
+            <input class="btn btn-warning mt-3" type="reset" value="Limpar">
+        </fieldset>
+    </form> -->
+
+<!-- --------------------------------------- -->
+
+<!-- <form action="" class="form-group">
+      <h4>Calculo da area de um raio</h4>
+
+      <label for="" class="form-control">
+      Raio
+      <input type="number" name="raio" id="iraio" placeholder="Informe valor do raio" class="text-center" >
+
+      <input class="btn btn-success"  type="button" value="Calcular Raio" onclick="calcularRaio()" onkeypress="calcularRaio()" >
+
+      <input type="reset" value="Reset">
+
+      <p id="raio" class="mt-4 text-danger" style="font-weight: bold;" >---</p>
+
+    </label>
 
 
-    </form>
-
-    
-
-
-
-
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-    <script src="js/exe-fixacao.js"></script>
-  </body>
-</html>
+  </form> -->
